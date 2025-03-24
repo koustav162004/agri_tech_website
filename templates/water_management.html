@@ -1,17 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Input Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='uploads/css/style.css') }}">
 </head>
 <body>
-    <h2>User Input Form</h2>
-    <form action="/water" method="POST">
-        <input type="text" name="maths" placeholder="Mathematics" />
-        <input type="text" name="science" placeholder="Science" />
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('home') }}">
+                <i class="fas fa-leaf me-2"></i>AgriTech
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home') }}">
+                            <i class="fas fa-home me-1"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('crop_model') }}">
+                            <i class="fas fa-seedling me-1"></i>Crop Recommendation
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('disease_model') }}">
+                            <i class="fas fa-virus me-1"></i>Disease Prediction
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Page Header -->
+    <header class="page-header py-5">
+        <div class="container">
+            <h1 class="display-4">Water Management</h1>
+            <p class="lead">Optimize your irrigation system for better water usage and crop health</p>
+        </div>
+    </header>
 
-        <input type="submit" value="Submit">
-    </form>
-    The average marks is {{score}}
+    <!-- Prediction Form -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <form action="/water" method="POST" class="needs-validation" novalidate>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="maths" class="form-label">Mathematics</label>
+                                    <input type="text" class="form-control" id="maths" name="maths" placeholder="Enter Mathematics" required>
+                                    <div class="valid-feedback">Looks good!</div>
+                                    <div class="invalid-feedback">Please enter Mathematics.</div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="science" class="form-label">Science</label>
+                                    <input type="text" class="form-control" id="science" name="science" placeholder="Enter Science" required>
+                                    <div class="valid-feedback">Looks good!</div>
+                                    <div class="invalid-feedback">Please enter Science.</div>
+                                </div>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Result Section -->
+    {% if score %}
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">Average Marks</h3>
+                        <div class="result-container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card bg-light mb-3">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Average Marks</h5>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Average Marks: {{ score }}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4">
+                                <a href="{{ url_for('home') }}" class="btn btn-outline-primary">Back to Home</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Form validation
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
 </body>
 </html>

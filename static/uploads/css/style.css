@@ -1,0 +1,403 @@
+/* Navigation Styles */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #007bff !important;
+}
+
+/* Banner Styles */
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1515781581189-4763a8d94c3b');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 150px 0;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.banner h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.banner p {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Features Section */
+.features-section {
+    background-color: #f8f9fa;
+    padding: 5rem 0;
+}
+
+.features-section .card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.features-section .card:hover {
+    transform: translateY(-5px);
+}
+
+.features-section .card-title {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.features-section .card-body {
+    padding: 2rem;
+}
+
+/* Call to Action Section */
+.cta-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section .lead {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.cta-section .btn {
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
+.cta-section .btn-primary {
+    background-color: #fff;
+    color: #007bff;
+    border: none;
+}
+
+.cta-section .btn-primary:hover {
+    background-color: #e9ecef;
+    color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.cta-section .btn-outline-primary {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.cta-section .btn-outline-primary:hover {
+    background-color: #fff;
+    color: #007bff;
+    transform: translateY(-2px);
+}
+
+/* Quick Info Card Styles */
+.quick-info-card {
+    transition: transform 0.3s;
+    cursor: pointer;
+    border: 2px solid #e9ecef;
+    margin-bottom: 2rem;
+}
+
+.quick-info-card:hover {
+    transform: translateY(-10px);
+    border-color: #007bff;
+}
+
+.quick-info-card .card-body {
+    padding: 2.5rem;
+}
+
+.quick-info-card h3 {
+    margin-bottom: 1.5rem;
+}
+
+/* Card Icons */
+.card-title i {
+    color: #007bff;
+    font-size: 1.5rem;
+}
+
+/* Image Gallery Styles */
+.image-gallery {
+    margin-top: 2rem;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Video Container Styles */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Button Styles */
+.btn-primary {
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+    
+    .banner p {
+        font-size: 1.2rem;
+    }
+    
+    .card {
+        margin-bottom: 20px;
+    }
+    
+    .quick-info-card .card-body {
+        padding: 1.5rem;
+    }
+    
+    .features-section .card {
+        margin-bottom: 20px;
+    }
+    
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-section .lead {
+        font-size: 1.1rem;
+    }
+    
+    .quick-info-card .card-body {
+        padding: 2rem;
+    }
+}
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1515781581189-4763a8d94c3b');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.page-header p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+
+/* Prediction Form */
+.prediction-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.prediction-form .card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.prediction-form .card:hover {
+    transform: translateY(-5px);
+}
+
+.prediction-form .form-label {
+    font-weight: 500;
+    color: #333;
+}
+
+.prediction-form .form-control {
+    border-radius: 8px;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+}
+
+.prediction-form .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.prediction-form .btn-primary {
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.prediction-form .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Result Section */
+.result-container {
+    padding: 2rem;
+}
+
+.result-container h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 1.5rem;
+}
+
+.result-container .alert {
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.result-container .alert-info {
+    background-color: #e3f2fd;
+    border-color: #b3e5fc;
+    color: #01579b;
+}
+
+.result-container .alert-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Image Preview Modal */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    border-bottom: none;
+    padding: 1.5rem;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+#previewImage {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Water Management Cards */
+.water-management-cards .card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    margin-bottom: 1.5rem;
+}
+
+.water-management-cards .card:hover {
+    transform: translateY(-5px);
+}
+
+.water-management-cards .card-body {
+    padding: 1.5rem;
+}
+
+.water-management-cards h5 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.water-management-cards .list-group-item {
+    border: none;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.water-management-cards .list-group-item:last-child {
+    border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .page-header p {
+        font-size: 1.1rem;
+    }
+    
+    .prediction-form .btn-primary {
+        width: 100%;
+    }
+    
+    .water-management-cards .card {
+        margin-bottom: 1rem;
+    }
+}
